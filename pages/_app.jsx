@@ -1,23 +1,29 @@
+
 import { createGlobalStyle, ThemeProvider} from 'styled-components'
 
 import theme from '../src/theme'
 
 const GlobalStyle = createGlobalStyle`
   * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
   }
+
   body {
-    font-family: 'Roboto', sans-serif;
-    color: ${props => props.theme.black};
+    background-color: ${props => props.theme.gray900};
+    color: ${props =>  props.theme.gray100};
+  }
+
+  body input textarea button {
+    font-family: 'Roboto';
+    font-weight: 400px;
   }
 `
 
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
+      <GlobalStyle />     
       <Component {...pageProps} />
     </ThemeProvider>
   )
