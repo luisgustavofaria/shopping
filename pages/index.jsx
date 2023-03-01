@@ -1,31 +1,40 @@
 import { Container, Header } from "@/src/components/Header"
-import styled from "styled-components"
+import logoImg from "../public/logo.svg"
+import {HomeContainer, Product} from "../src/components/Home"
+import camiseta1 from "../public/1.png"
+import camiseta2 from "../public/2.png"
+import camiseta3 from "../public/3.png"
 
-const Button = styled.button`
-  padding: 4px 8px;
-  border-radius: 4px;
-  border: 0;
-  background-color: ${props => props.theme.green300};
 
-  :hover{
-    cursor: pointer;
-    filter: brightness(1.8);
-    transition: 0.3s;
-  }
-
-`
+import Image from "next/image"
 
 
 export default function Home() {
   return (
-    <div>
     <Container>
       <Header>
-        <img src="logo.svg" alt="" />
-      </Header>
-      <Button>ENVIAR</Button>
-    </Container>
-    </div>
+        <Image src={logoImg} alt="" />
+      </Header>  
+      <HomeContainer>
+        <Product>
+          <Image src={camiseta1} width={520} height={480} alt="" />
+
+          <footer>
+            <strong>Camiseta X</strong>
+            <span>R$ 79,90</span>
+          </footer>
+        </Product>
+
+        <Product>
+          <Image src={camiseta2} width={520} height={480} alt="" />
+
+          <footer>
+            <strong>Camiseta X</strong>
+            <span>R$ 79,90</span>
+          </footer>
+        </Product>
+      </HomeContainer>
+    </Container>  
         
   )
 }

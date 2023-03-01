@@ -1,6 +1,9 @@
 
+import { Container, Header } from '@/src/components/Header'
 import { createGlobalStyle, ThemeProvider} from 'styled-components'
+import logoImg from "../public/logo.svg"
 
+import Image from 'next/image'
 import theme from '../src/theme'
 
 const GlobalStyle = createGlobalStyle`
@@ -23,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />     
+      <GlobalStyle />   
       <Component {...pageProps} />
     </ThemeProvider>
   )
