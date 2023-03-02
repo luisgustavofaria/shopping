@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const HomeContainer = styled.main`
 display: flex;
-gap: 3rem;
+//gap: 3rem;
 width: 100%;
 max-width: calc(100vw - ((100vw - 1180px) / 2));
 margin-left: auto;
@@ -12,7 +12,7 @@ min-height: 656px;
 export const Product = styled.a`
   background: linear-gradient(180deg, #1ea483 0%, #7465d4 100%);
   border-radius: 8px;
-  padding: 0.25rem;
+  //padding: 0.25rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
