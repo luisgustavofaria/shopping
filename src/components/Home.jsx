@@ -40,6 +40,7 @@ export const Product = styled.a`
         
         background-color: rgba(0, 0, 0, 0.6);
         
+        /*
         transform: translateY(110%);
         opacity: 0px;
         transition: all 0.2s ease-in-out;
@@ -48,6 +49,7 @@ export const Product = styled.a`
             transform: translateY(0%);
             opacity: 1; 
         }
+        */
     } 
         
     strong {
